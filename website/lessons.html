@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Video Game Development | Blog</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<script src="js/jquery.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+if ($(window).width() > 1024) {
+    document.write("<" + "script src='js/jquery.preloader.js'></" + "script>");
+}
+</script>
+<script>
+jQuery(window).load(function () {
+    $x = $(window).width();
+    if ($x > 1024) {
+        jQuery("#content .row").preloader();
+    }
+    jQuery(".list-blog li:last-child").addClass("last");
+    jQuery(".list li:last-child").addClass("last");
+    jQuery('.spinner').animate({
+        'opacity': 0
+    }, 1000, 'easeOutCubic', function () {
+        jQuery(this).css('display', 'none')
+    });
+});
+</script>
+<!--[if lt IE 8]>
+<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+<![endif]-->
+</head>
+<body>
+<div class="spinner"></div>
+<!--  header  -->
+<header>
+  <div class="container clearfix">
+    <div class="row">
+      <div class="span12">
+        <div class="navbar navbar_">
+          <div class="container">
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/vgdlogo.png"> </a></h1>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+              <ul class="nav sf-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="blog.html">Lessons</a></li>
+                <li><a href="code.html">Code</a>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="bg-content">
+  <!--  content  -->
+  <div id="content">
+    <div class="ic"></div>
+    <div class="container">
+      <div class="row">
+        <article class="span8">
+          <div class="inner-1">
+            <ul class="list-lessons">
+                <li class="blogpost"id="day1" >
+                <h3>Day 1</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-1.jpg">
+                <ul>
+
+                        <li>Let's Make PB & J: The Programmer Way</li>
+                        <li>Introductions</li>
+                        <li>Set up PyCharm</li>
+                        <li>Python Basics</li>
+                        <li>Assigment: Hello World & Interest Calculator</li>
+                        <p><strong>Creating a PyCharm project</strong></p>
+
+<p>Find and open PyCharm, then create a new project with Python 3.3 (or 3.4 if you don't have 3.3). Give your project a name like "VideoGameDevelopment". Add a new file to your project called "assignment0.py" or some other informative name. Open the file and type <pre><code>print("hello world!")</pre></code> Click on the "Run" menu at the top, then click "Run..." (make a mental note of the keyboard shortcut here - control+option+R on my mac). A "configurations" mini menu will pop up - ignore this for now and just click the name of your file.</p>
+
+<p>If it works, you should see a <strong>console</strong> pop up, and in it "hello world!" printed out!</p>
+
+<p>Print out your name with some decoration.</p>
+<p>Assignment 0: Alice and Bob both just got an interesting letter in the mail. The world bank just uncovered some documents dating back over 2000 years, and it turns out each of their distant ancestors had made some forward-thinking deposits back in year 0, and all the intereste accumulated since then goes to Alice and Bob. How lucky!</p>
+
+<p>Alice's ancestor deposited what experts think is about $1.00, in an account that gets 5% interest. So in the year 1AD, the account had $1.05. In the year 2, $1.1025 ($1.05 x 1.05).</p>
+
+<p>Bob's account had $100,000.00 in it in year 0, but got a worse deal at 4% interest.</p>
+
+<p>Write a program that - using a for loop - calculates and prints out how much money each account has in the year 2015.</p>
+
+<p>Modify your program to also print out in what year Alice's account first grew bigger than Bob's.</p>
+                        <li>Assignment: Number Guessing Game</li>
+                        <p>Write a program that picks a random number, then counts how many guesses it takes for the user to figure it out. Each time the user makes a guess, the program should print "Too High!" or "Too Low!" so the user can make more educated guesses. Here are some snippets to help you out:</p>
+
+<pre><code>
+import random # put this at the top of your file
+answer = random.randint(1,100) # pick a random number between 1 and 100
+...
+guess = input("enter a guess: ") # gets user input as a string
+guess = int(guess) # converts from a string to a number. might make your program crash if the user didn't input a number!
+</pre></code>
+
+<p>Bonus 1: handle any input even if not a number</p>
+
+<p>Bonus 2: give the user the option of replaying and/or choosing the range of numbers. Hint: put the game inside a function</p>
+
+                </ul>
+
+
+                <li class="blogpost"id="day2">
+                <h3>Day 2</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-2.jpg">
+                <ul>
+                        <li>Game: Find the Common Thread</li>
+                        <li>Functions and Arrays</li>
+                        <li>Assignment: Min and Max</li>
+                        <p><strong>Complete the following code</strong> (make a new file called "arrays.py")</p>
+           <pre><code class="python"># here is an array with 200 numbers in it, all between 1 and 1000
+the_array = [563, 683, 752, 73, 452, 851, 21, 861, 199, 476, 395, 807, 563, 987, 926, 633, 88, 789, 428, 58, 134, 618, 104, 392, 864, 106, 477, 161, 906, 846, 117, 555, 393, 82, 509, 695, 987, 202, 200, 585, 362, 580, 410, 917, 549, 289, 359, 694, 218, 430, 704, 324, 209, 727, 523, 409, 443, 277, 911, 715, 937, 595, 72, 820, 810, 306, 525, 32, 868, 17, 822, 701, 64, 10, 468, 286, 945, 211, 265, 94, 197, 65, 480, 925, 241, 282, 3, 255, 169, 48, 437, 292, 383, 742, 996, 390, 625, 563, 241, 717, 549, 133, 510, 904, 670, 786, 215, 186, 59, 280, 400, 623, 839, 109, 685, 97, 73, 252, 575, 749, 32, 879, 109, 84, 884, 29, 45, 889, 319, 473, 597, 714, 397, 421, 285, 83, 557, 855, 956, 721, 717, 548, 30, 926, 562, 981, 128, 649, 255, 393, 942, 83, 75, 615, 875, 31, 372, 593, 683, 265, 804, 73, 205, 918, 112, 153, 347, 735, 684, 422, 790, 768, 991, 460, 706, 366, 664, 529, 129, 546, 791, 379, 564, 982, 542, 442, 244, 434, 256, 848, 360, 938, 674, 452, 496, 695, 612, 385, 371, 811];
+
+# here is another one with different values
+the_other_array = [169, 969, 159, 964, 972, 659, 141, 148, 879, 330, 786, 37, 97, 5, 9, 316, 278, 709, 557, 742, 382, 559, 687, 691, 189, 24, 627, 121, 989, 554, 491, 941, 51, 848, 820, 744, 539, 742, 687, 273, 789, 711, 320, 26, 878, 280, 519, 934, 234, 659, 445, 705, 345, 240, 764, 320, 170, 201, 437, 398, 618, 794, 872, 811, 65, 279, 39, 842, 973, 632, 596, 31, 898, 545, 434, 495, 793, 916, 50, 54, 339, 933, 280, 295, 276, 117, 123, 457, 634, 542, 31, 722, 47, 314, 848, 816, 676, 967, 194, 608, 178, 712, 832, 749, 413, 308, 464, 874, 191, 60, 530, 592, 43, 22, 431, 961, 333, 359, 819, 283, 658, 219, 946, 870, 160, 233, 999, 974, 597, 722, 340, 759, 281, 799, 164, 832, 939, 607, 206, 724, 197, 132, 41, 256, 509, 122, 553, 904, 573, 854, 711, 439, 587, 217, 595, 134, 323, 446, 897, 592, 866, 812, 929, 541, 994, 149, 972, 201, 883, 251, 809, 913, 150, 346, 108, 290, 528, 990, 375, 301, 12, 395, 989, 462, 616, 402, 556, 128, 400, 840, 622, 993, 793, 865, 731, 399, 679, 922, 535, 285]
+
+
+def get_minimum(array):
+   # returns the minimum value of a given array
+
+   minimum_so_far = 1001
+
+   for num in array:
+       # YOUR CODE HERE
+       pass # pass is just a 'placeholder' that tells python that nothing goes here yet. you can - and should - delete it
+
+   return minimum_so_far
+
+def get_sum(array):
+   # returns the sum of all the values of a given array
+
+   # YOUR CODE HERE
+   pass
+
+print("the smallest number of the_array is", get_minimum(the_array)) # should be 3
+print("the sum of the_array is", get_sum(the_array)) # should be 95911
+
+print("the smallest number of the_other_array is", get_minimum(the_other_array)) # should be 5
+print("the sum of the_other_array is", get_sum(the_other_array)) # should be 102513</code></pre>
+
+                        <li>PyGame Basics</li>
+                        <p>PyGame is a <strong>library</strong> that <strong>wraps</strong> Simple DirectMedia Layer (also known as SDL). SDL gives us an easy way to access the computer's graphics, audio, and the keyboard and mouse.</p>
+
+<p>Make a <strong>new PyCharm project</strong> called "Day2" (or whatever name you choose). Make sure that the project is using Python 3.3 or 3.4</p>
+
+
+
+<p>Click on <strong>File &gt; New</strong>, then choose <strong>Python File</strong>. Call it "drawing.py". In it put the following code (try to do it from memory)</p>
+
+<pre><code class="python">import pygame
+pygame.init()
+
+screen_width = 800
+screen_height = 600
+
+main_surface = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("Title goes here")
+
+pygame.quit()
+</code></pre>
+
+<p>Click on <strong>Run &gt; Run...</strong>. What happens?</p>
+
+<div class="panel panel-danger">
+    <div class="panel-heading">Windows users</div>
+    <div class="panel-body">Somewhere on your computer is a folder called "pygame", and we need to tell PyCharm where it is. Open up the <strong> File &gt; Settings</strong> menu, and click on <strong>Project:Day2 &gt; Project Structure</strong>. Next, click on <strong>+ Add Content Root</strong>, and navigate to the folder that looks like <code>C:\Temp\pygame1.9.2...something</code> (<strong>NOT</strong> the <code>pygame</code> folder inside of that one). Click apply, close out of the settings and try running your code again.</div>
+</div>
+
+
+
+                        <li>Assignment: Colored Squares</li>
+                        <p>Name some colors and display them on a white backgrand in 30x30 rectangles. Here is what mine looked like (I'm sure you can make more!)</p>
+
+
+
+    <pre><code class="python"># colors are RGB (Red, Green, Blue), where each one ranges from 0 to 255
+    white=(255,255,255)
+    black=(0,0,0)
+    bright_red=(255,0,0)
+    dark_red=(128,0,0)</code></pre>
+
+    <p><strong>Bonus:</strong> Make it a function</p>
+
+<pre><code>def draw_colored_squares(colors_array, square_width):
+    # YOUR CODE HERE
+    # hint: len(colors_array) will tell you how many colors there are
+
+# and add in your own long list of colors here
+draw_colored_squares([white,black,bright_red,dark_red], 30)   </code></pre>
+                </ul>
+
+                <li class="blogpost" id="day3">
+                <h3>Day 3</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-3.jpg">
+
+                <ul>
+                        <li>Game: Idea as Building Blocks</li>
+                        <li>Animation & Assignment: Moving Square</li>
+                        <p>Animations are nothing but a fast sequence of still images - usually 30 or 60 of them per second! Think of it like a flip book. Here is the "skeleton" of an animation:</p>
+
+    <p style="width:100%;text-align:center"><strong>skeleton.py</strong></p>
+	<pre><code class="python">import pygame
+import pygame.locals as pl
+pygame.init()
+from vgd import colors
+
+screen_width = 800
+screen_height = 600
+
+main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+game_exit = False
+
+
+# DEFINE FUNCTIONS AND VARIABLES HERE
+
+
+while not game_exit:
+
+    # handle inputs
+    for evt in pygame.event.get():
+        if evt.type == pl.QUIT:
+            game_exit = True
+        # ADD YOUR INPUT CODE HERE
+
+    # DRAW A NEW FRAME HERE
+
+    pygame.display.update()
+
+pygame.quit()</code></pre>
+    <p><strong>Exercise:</strong> make a square move across the screen. Hint: use a variable <code class="python">block_x</code> to keep track of where it is that starts at zero and gets larger each frame. Remember to clear the screen, otherwise you'll get the "loading bar" look!</p>
+    <p><strong>Exercise:</strong> Now make it bounce! Hint: use another variable <code class="python">speed_x</code> or <code class="python">vx</code> to keep track of the direction and speed it is moving</p>
+
+
+    <p>Remember how to make a new PyCharm project that has pygame loaded?</p>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">Windows users</div>
+        <div class="panel-body">Somewhere on your computer is a folder called "pygame", and we need to tell PyCharm where it is. Open up the <strong> File &gt; Settings</strong> menu, and click on <strong>Project:Day2 &gt; Project Structure</strong>. Next, click on <strong>+ Add Content Root</strong>, and navigate to the folder that looks like <code>C:\Temp\pygame1.9.2...something</code> (<strong>NOT</strong> the <code>pygame</code> folder inside of that one). Click apply, close out of the settings and try running your code again.</div>
+    </div>
+
+                        <li>Events</li>
+                        <p>The events we will be using are</p>
+
+<table class="table">
+<thead>
+    <tr>
+        <th>Event</th>
+        <th>Properties</th>
+        <th>Useful for...</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>QUIT</td>
+        <td>none</td>
+        <td>when the user clicks x. This is how check_quit() works!</td>
+    </tr>
+    <tr>
+        <td>ACTIVEEVENT</td>
+        <td>gain, state</td>
+        <td>when the application loses 'focus' (good for pausing the game)</td>
+    </tr>
+    <tr>
+        <td>KEYDOWN</td>
+        <td>unicode, key, mod</td>
+        <td>when the user presses a key (good for arrow key control)</td>
+    </tr>
+    <tr>
+        <td>KEYUP</td>
+        <td>key, mod</td>
+        <td>when the user releases a key.</td>
+    </tr>
+    <tr>
+        <td>MOUSEMOTION</td>
+        <td>pos, rel, buttons</td>
+        <td>tracks where the mouse is on the screen</td>
+    </tr>
+    <tr>
+        <td>MOUSEBUTTONUP</td>
+        <td>pos, button</td>
+        <td>when the user releases the mouse (good for checking where they click)</td>
+    </tr>
+    <tr>
+        <td>MOUSEBUTTONDOWN</td>
+        <td>pos, button</td>
+        <td>when the user presses the mouse (animating buttons, maybe)</td>
+    </tr>
+</tbody>
+</table>
+
+<p><strong>Exercise: </strong> change the color of a square when the mouse hovers over it.</p>
+
+    <p>I <em>strongly recommend</em> making a single function that checks whether a point is inside of a rectangle</p>
+
+<pre><code class="python">def is_point_inside_rect(point, rect):
+    # YOUR CODE HERE
+    # this function should return True if the point is within the walls of the rectangle
+</code></pre>
+
+<p><strong>My solution:</strong></p>
+
+<p style="width:100%;text-align:center"><strong>mouseover.py</strong></p>
+	<pre><code class="python">import pygame
+import pygame.locals as pl
+pygame.init()
+from vgd import colors, is_point_in_rect
+
+screen_width = 800
+screen_height = 600
+
+main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+blocksize = 80
+
+block = (screen_width/2-blocksize/2, screen_height/2-blocksize/2, blocksize, blocksize)
+
+mouse_position = (0,0)
+
+main_surface.fill(colors["white"])
+
+game_exit = False
+
+while not game_exit:
+
+
+    for evt in pygame.event.get():
+        if evt.type == pl.QUIT:
+            game_exit = True
+        elif evt.type == pl.MOUSEMOTION:
+            mouse_position = evt.pos
+
+    if is_point_in_rect(mouse_position, block):
+        pygame.draw.rect(main_surface, colors['red'], block)
+    else:
+        pygame.draw.rect(main_surface, colors['green'], block)
+
+    pygame.display.update()
+
+pygame.quit()</code></pre>
+
+
+    <li>Managing multiple game objects</li>
+
+    <p>So far we've only had a single square moving, so it was fine to have one variable <code class="python">block_x</code> to keep track of it. With more than one game object moving around, we need to start keeping track of them in <em>lists</em>. Let's say for every square we want to know <ul><li>where it is</li><li>its direction of motion</li></ul> Which do you prefer?</p>
+
+<pre><code class="python">squares_sizes = [5,10,15]
+squares_xs = [100, 200, 103]
+squares_ys = [50, 60, 400]
+squares_vxs = [1.2, -4.3, 5.0]
+squares_vys = [3.5, 1.1, 0.0]
+squares_colors = [black, red, blue]
+
+# -- OR --
+
+squares_properties = [
+{"size": 5,
+ "x": 100,
+ "y": 50,
+ "vx": 1.2,
+ "vy": 3.5,
+ "color": black},
+{"size": 10,
+ "x": 200,
+ "y": 60,
+ "vx": -4.3,
+ "vy": 1.1,
+ "color": red},
+{"size": 15,
+ "x": 103,
+ "y": 400,
+ "vx": 5.0,
+ "vy": 0.0,
+ "color": blue}]
+ </code></pre>
+
+    <p><strong>Exercise:</strong> Create a bouncing square wherever the user clicks. useful code is <code class="python">array.append(value)</code></code></p>
+
+
+                </ul>
+
+
+
+
+                <li class="blogpost" id="day4">
+                <h3>Day 4</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-1.jpg">
+                <p>Assignment and stuff</p>
+                <ul>
+                        <li>Game: Problem Family Tree</li>
+                        <li>Debug That Code!</li>
+                        <p>What's wrong with the following code? How can we fix it?</p>
+
+                            <p style="width:100%;text-align:center"><strong>mouseover_bug.py</strong></p>
+                        	<pre><code class="python">import pygame
+                        import pygame.locals as pl
+                        pygame.init()
+                        from vgd import colors, is_point_in_rect
+
+                        screen_width = 800
+                        screen_height = 600
+
+                        main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+                        blocksize = 80
+
+                        block = (screen_width/2-blocksize/2, screen_height/2-blocksize/2, blocksize, blocksize)
+
+                        main_surface.fill(colors["white"])
+
+                        game_exit = False
+
+                        while not game_exit:
+
+                            the_color = colors["green"]
+
+                            for evt in pygame.event.get():
+                                if evt.type == pl.QUIT:
+                                    game_exit = True
+                                elif evt.type == pl.MOUSEMOTION:
+                                    if is_point_in_rect(evt.pos, block):
+                                        the_color = colors["red"]
+
+                            pygame.draw.rect(main_surface, the_color, block)
+
+                            pygame.display.update()
+
+                        pygame.quit()</code></pre>
+                            <p>Answer: the color is only set to red <em>when the mouse is moving</em>. We fix it by making a variable that tells us where the mouse is even when it isn't moving! </p>
+
+                            <p style="width:100%;text-align:center"><strong>mouseover.py</strong></p>
+                        	<pre><code class="python">import pygame
+                        import pygame.locals as pl
+                        pygame.init()
+                        from vgd import colors, is_point_in_rect
+
+                        screen_width = 800
+                        screen_height = 600
+
+                        main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+                        blocksize = 80
+
+                        block = (screen_width/2-blocksize/2, screen_height/2-blocksize/2, blocksize, blocksize)
+
+                        mouse_position = (0,0)
+
+                        main_surface.fill(colors["white"])
+
+                        game_exit = False
+
+                        while not game_exit:
+
+
+                            for evt in pygame.event.get():
+                                if evt.type == pl.QUIT:
+                                    game_exit = True
+                                elif evt.type == pl.MOUSEMOTION:
+                                    mouse_position = evt.pos
+
+                            if is_point_in_rect(mouse_position, block):
+                                pygame.draw.rect(main_surface, colors['red'], block)
+                            else:
+                                pygame.draw.rect(main_surface, colors['green'], block)
+
+                            pygame.display.update()
+
+                        pygame.quit()</code></pre>
+                        <li>Assignment: Draw a square wherever the user clicks (using MOUSEBUTTONUP)</li>
+                        <p>I can think of two ways to do this. The less-prefered way is to draw each square once when the user clicks and never clear the screen. That would not be good because it doesn't let us do much else with it (for example, make them move). <em>Instead</em> you should have a list (aka array) of rectangles and <code class="python">append</code> to it whenever the user clicks. Redraw each frame from scratch like we did yesterday.</p>
+
+<pre><code class="python"># RECOMMENDED 'HELPER' FUNCTIONS FOR TODAY:
+def create_square_centered_at(center, size, color):
+    mid_x, mid_y = center
+    # YOUR CODE HERE
+
+def draw_square(square, color):
+    # as usual,
+    # 'square' is a tuple (x,y,w,h)
+    # 'color' is a tuple (r,g,b)
+
+    # YOUR CODE HERE
+
+# Save this one for later...
+def move_square(square, dx, dy):
+    # YOUR CODE HERE
+</code></pre>
+
+    <p style="width:100%;text-align:center"><strong>click_squares.py</strong></p>
+	<pre><code class="python">import pygame
+import pygame.locals as pl
+pygame.init()
+import random
+from vgd import random_color
+
+screen_width = 800
+screen_height = 600
+
+# R, G, B
+white = (255, 255, 255)
+black = (0, 0, 0)
+
+main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+game_exit = False
+
+side_length = 30
+
+objects = []
+
+
+
+
+
+
+
+
+
+def create_square_centered_at(center, size, color):
+    mid_x, mid_y = center
+
+    left = mid_x - size / 2
+    top = mid_y - size / 2
+
+    vx = random.randint(-3,3)
+    vy = random.randint(-3,3)
+    return { "rect": [left, top, size, size], "color": color, "velocity": [vx,vy]}
+
+
+
+
+
+
+
+
+
+def draw_object(obj):
+    pygame.draw.rect(main_surface, obj["color"], obj["rect"])
+
+def move_object(obj):
+    obj["rect"][0] += obj["velocity"][0]
+    obj["rect"][1] += obj["velocity"][1]
+
+# main loop over frames
+while not game_exit:
+
+    # handle input
+    for evt in pygame.event.get():
+        if evt.type == pl.QUIT:
+            game_exit = True
+        elif evt.type == pl.MOUSEBUTTONUP:
+            new_square = create_square_centered_at(evt.pos, side_length, random_color())
+            objects.append(new_square)
+
+    # draw frame
+    main_surface.fill(white)
+    for obj in objects:
+        move_object(obj)
+        draw_object(obj)
+
+    # update screen
+    pygame.display.update()
+
+pygame.quit()</code></pre>
+    <p>I chose to use a dictionary to keep track of each square. You could choose to do it another way. The important thing is that we can sweep all the details "under the rug" by making <code class="python">create_square_centered_at()</code> and <code class="python">draw_square()</code> handle it all for us!
+                        <li>Assignment: Create a <em>moving</em> square wherever the user clicks. useful code is <code class="python">array.append(value)</code></code></p>
+
+                        <li>Keyboard Movement</li>
+                        <p>Just like we saw in the "mouseover_bug" code, it's not enough to just change the square's position whenever a key is pressed!</p>
+
+    <p style="width:100%;text-align:center"><strong>keyboard_square.py</strong></p>
+	<pre><code class="python">import pygame
+import pygame.locals as pl
+pygame.init()
+from vgd import colors
+
+screen_width = 800
+screen_height = 600
+
+main_surface = pygame.display.set_mode((screen_width, screen_height))
+
+
+# Helper functions
+def create_square_centered_at(center, size, color):
+    mid_x, mid_y = center
+
+    left = mid_x - size / 2
+    top = mid_y - size / 2
+
+    # Using a LIST "[]" for the rect rather than a TUPLE "()" because lists allow things to be changed in-place
+    return { "rect": [left, top, size, size], "color": color }
+
+def draw_square(square):
+    pygame.draw.rect(main_surface, square["color"], square["rect"])
+
+def move_square(square, dx, dy):
+    square["rect"][0] += dx
+    square["rect"][1] += dy
+
+
+def contain(square, boundary_rect):
+    r = square["rect"]
+    # Left check
+    if r[0] < boundary_rect[0]:
+        r[0] = boundary_rect[0]
+    # Right check
+    elif r[0] + r[2] > boundary_rect[0] + boundary_rect[2]:
+        # set to boundary - width of square
+        r[0] = boundary_rect[2] - r[2]
+
+    # Top check
+    # WHAT IF THIS WERE 'elif'???
+    if r[1] < boundary_rect[1]:
+        r[1] = boundary_rect[1]
+    # bottom check
+    elif r[1] + r[3] > boundary_rect[1] + boundary_rect[3]:
+        # set to boundary - height of square
+        r[1] = boundary_rect[3] - r[3]
+
+# variables
+w_is_down = False
+a_is_down = False
+s_is_down = False
+d_is_down = False
+
+side_length = 20
+movement = 5
+the_square = create_square_centered_at((screen_width/2, screen_height/2), side_length, colors["black"])
+
+# main loop
+game_exit = False
+while not game_exit:
+
+    # handle inputs
+    for evt in pygame.event.get():
+        if evt.type == pl.QUIT:
+            game_exit = True
+        if evt.type == pl.KEYDOWN:
+            if evt.key == pl.K_s:
+                # s was just pressed
+                s_is_down = True
+            elif evt.key == pl.K_w:
+                w_is_down = True
+            elif evt.key == pl.K_a:
+                a_is_down = True
+            elif evt.key == pl.K_d:
+                d_is_down = True
+        if evt.type == pl.KEYUP:
+            if evt.key == pl.K_s:
+                s_is_down = False
+            elif evt.key == pl.K_a:
+                a_is_down = False
+            elif evt.key == pl.K_w:
+                w_is_down = False
+            elif evt.key == pl.K_d:
+                d_is_down = False
+
+
+    # done handling inputs
+
+    if s_is_down:
+        move_square(the_square, 0, movement)
+    if w_is_down:
+        move_square(the_square, 0, -movement)
+    if a_is_down:
+        move_square(the_square, -movement, 0)
+    if d_is_down:
+        move_square(the_square, movement, 0)
+
+    # keep it on the screen
+    contain(the_square, main_surface.get_rect())
+
+    main_surface.fill(colors["white"])
+    draw_square(the_square)
+
+    pygame.display.update()
+
+pygame.quit()</code></pre>
+    <p><strong>Exercise:</strong> modify this code so that as long as I am holding down a key, the square keeps moving</p>
+
+
+
+                </ul>
+
+                <li class="blogpost" id="day5">
+                <h3>Day 5</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-2.jpg">
+
+
+                <li class="blogpost"id="day6">
+                <h3>Day 6</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-3.jpg">
+                <p>Assignment and stuff</p>
+                <ul>
+                        <li>Game: This is Better Than That</li>
+                        <li>Assignment 5: Pong Paddles</li>
+                        <p><strong>Exercise: </strong>Make two moving pong paddles: the left one controlled by W/S and the other by UP/DOWN. Make it so they can't move off the screen</p>
+
+                        <li>Assignment 6: Move Around Mario!</li>
+                        <li>Assignment 7: Text Rendering</li>
+                        <p>Display "hello world" on the screen using a font you downloaded from <a href="http://www.fontsquirrel.com/fonts/list/popular">http://www.fontsquirrel.com/fonts/list/popular</a>. First, make a folder in your project called "fonts". Then download a font you like and "unzip" it so all the ttf files are in the fonts folder. To load this font, do <code class="python">myfont = pygame.font.Font("fonts/shinynewfont.ttf", 30)</code></p>
+
+                </ul>
+
+                <li class="blogpost" id="day7">
+                <h3>Day 7</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-1.jpg">
+                <p>Assignment and stuff</p>
+
+                <li class="blogpost" id="day8">
+                <h3>Day 8</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-2.jpg">
+                <p>Assignment and stuff</p>
+
+                <li class="blogpost"id="day9">
+                <h3>Day 9</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-3.jpg">
+                <p>Assignment and stuff</p>
+
+                <li class="blogpost" id="day10">
+                <h3>Day 10</h3>
+                <div class="clear"></div>
+                <img alt="" src="img/blog-1.jpg">
+                <p>Assignment and stuff</p>
+
+
+            </ul>
+          </div>
+        </article>
+        <article class="span4">
+
+
+          <h3>Schedule</h3>
+          <div class="wrapper">
+            <ul class="list extra2 list-pad ">
+              <li><a href="#day1">Day 1</a></li>
+              <li><a href="#day2">Day 2</a></li>
+              <li><a href="#day3">Day 3</a></li>
+              <li><a href="#day4">Day 4</a></li>
+              <li><a href="#day5">Day 5</a></li>
+              <li><a href="#day6">Day 6</a></li>
+            </ul>
+            <ul class="list extra2">
+              <li><a href="#day7">Day 7</a></li>
+              <li><a href="#day8">Day 8</a></li>
+              <li><a href="#day9">Day 9</a></li>
+              <li><a href="#day10">Day 10</a></li>
+
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  footer  -->
+<footer>
+  <div class="container clearfix">
+
+    <div class="privacy pull-left">2016| Video Game Development | Pre-College Program</div>
+  </div>
+</footer>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
